@@ -122,6 +122,7 @@ button img {
 
 .temp {
 	font-weight: bold;
+	font-size: 20px;
 }
 
 .icons img {
@@ -168,12 +169,82 @@ p {
 	text-align: justify;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1500px) {
 	body {
 		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 14px;
 	}
 
 	.weather-box div {
 		padding-left: 5px !important
+	}
+
+	#city-name {
+		font-size: 30px;
+		margin-bottom: 0px;
+	}
+
+	#date, #time, #weather-description {
+		font-size: 16px;
+	}
+
+	#current-temperature {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	body {
+		font-size: 12px;
+	}
+
+	#current-icon img {
+		width: 100px;
+	}
+
+	#city-name {
+		font-size: 28px;
+	}
+
+	#date, #time, #weather-description {
+		font-size: 12px;
+	}
+
+	#current-temperature {
+		font-size: 36px;
+	}
+
+	.box-title {
+		font-size: 16px;
+	}
+
+	.icons img {
+		width: 50px;
+	}
+
+	.temp {
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	h2 {
+		font-size: 28px;
+	}
+
+	h3 {
+		font-size: 22px;
 	}
 }
