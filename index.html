@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>TrusApka - asystent plantatora truskawek</title>
+    <meta name="description" content="Aplikacja dla plantatorów truskawek">
+	<meta name="keywords" content="truskawki, plantacja, pogoda">
+	<meta name="author" content="Anita Plichta">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-dark bg-jumpers">
+			<a class="navbar-brand" href="index.html">
+				<img src="img/logo-white.png" height="50" class="d-inline-block align-bottom" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mainmenu">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Aplikacja</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="katalog.html">Katalog zagrożeń</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="abcplantatora.html">ABC plantatora</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="row">
+			<section class="col-10 offset-1 col-lg-4 offset-lg-4">
+				<div class="search-box row">
+					<input type="text" placeholder="Wpisz miejscowość" id="look" class="col-9 col-sm-10">
+					<button id="search" class="col-3 col-sm-2">
+						<img src="img/loupe.svg">
+					</button>
+				</div>	
+			</section>
+		</section>
+		<section id="app" class="row mt-5 mb-5">
+			<script>
+				var app = document.querySelector('#app')
+				app.classList.add('app-no')
+
+				var search = document.querySelector('#search')
+				search.addEventListener('click', function() {
+					app.classList.remove('app-no')
+					app.classList.add('app-yes')
+				})
+			</script>
+			<section class="row col-12">
+				<div class="col-10 offset-1 col-lg-7 offset-lg-1">
+					<div class="weather-box">
+						<div class="row col-12">
+							<div id="current-icon" class="col-12 col-lg-3"></div>
+							<div class="row col-12 col-lg-6">
+								<div id="city-name" class="col-12"></div>
+								<div class="row">
+									<div id="date" class="col-9"></div>
+									<div id="time" class="col-3"></div>
+								</div>
+								<div id="weather-description" class="col-12 mt-3"></div>
+							</div>
+							<div id="current-temperature" class="col-12 col-lg-3 text-lg-right"></div>
+						</div>
+						<div class="col-12 mb-4 mb-lg-2">
+							<div class="col-12">
+								<div id="wind-speed"></div>
+								<div id="wind-direction"></div>
+								<div id="current-pressure"></div>
+								<div id="current-humidity"></div>
+								<div id="current-clouds"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-10 offset-1 col-lg-3 offset-lg-0 mt-4 mt-lg-0">
+					<div class="info-box p-5 p-lg-4">
+						<span class="box-title">Alerty</span>
+						<div id="info"></div>
+					</div>
+				</div>
+			</section>
+			<section class="row col-lg-12 mt-4">
+				<div class="col-10 offset-1">
+					<div class="hours-box row">
+						<span class="box-title d-lg-none mt-3 mb-3 ml-4">Prognoza 24h</span>
+						<div class="row col-12 col-lg-3">
+							<div class="col-6">
+								<div id="h1"></div>
+								<div id="ih1" class="icons"></div>
+								<div id="h1-temp" class="temp"></div>
+							</div>
+							<div class="col-6">
+								<div id="h2"></div>
+								<div id="ih2" class="icons"></div>
+								<div id="h2-temp" class="temp"></div>
+							</div>
+						</div>
+						<div class="row col-12 col-lg-3">
+							<div class="col-6">
+								<div id="h3"></div>
+								<div id="ih3" class="icons"></div>
+								<div id="h3-temp" class="temp"></div>
+							</div>
+							<div class="col-6">
+								<div id="h4"></div>
+								<div id="ih4" class="icons"></div>
+								<div id="h4-temp"></div>
+							</div>
+						</div>
+						<div class="row col-12 col-lg-3">
+							<div class="col-6">
+								<div id="h5"></div>
+								<div id="ih5" class="icons"></div>
+								<div id="h5-temp" class="temp"></div>
+							</div>
+							<div class="col-6">
+								<div id="h6"></div>
+								<div id="ih6" class="icons"></div>
+								<div id="h6-temp" class="temp"></div>
+							</div>
+						</div>
+						<div class="row col-12 col-lg-3">
+							<div class="col-6">
+								<div id="h7"></div>
+								<div id="ih7" class="icons"></div>
+								<div id="h7-temp" class="temp"></div>
+							</div>
+							<div class="col-6">
+								<div id="h8"></div>
+								<div id="ih8" class="icons"></div>
+								<div id="h8-temp" class="temp"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="row col-12 mt-4 mb-5">
+				<div class="col-10 offset-1 col-lg-7">
+					<div class="days-box row">
+						<span class="box-title col-12 d-lg-none mt-3 mb-3 ml-4">Prognoza 5-dniowa</span>
+						<div class="col-6 col-lg-2 offset-lg-1">
+							<div id="d0"></div>
+							<div id="id0" class="icons"></div>
+							<div id="d0-temp" class="temp"></div>
+						</div>
+						<div class="col-6 col-lg-2">
+							<div id="d1"></div>
+							<div id="id1" class="icons"></div>
+							<div id="d1-temp" class="temp"></div>
+						</div>
+						<div class="col-6 col-lg-2">
+							<div id="d2"></div>
+							<div id="id2" class="icons"></div>
+							<div id="d2-temp" class="temp"></div>
+						</div>
+						<div class="col-6 col-lg-2">
+							<div id="d3"></div>
+							<div id="id3" class="icons"></div>
+							<div id="d3-temp" class="temp"></div>
+						</div>
+						<div class="col-6 col-lg-2">
+							<div id="d4"></div>
+							<div id="id4" class="icons"></div>
+							<div id="d4-temp" class="temp"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-10 offset-1 col-lg-3 offset-lg-0 mt-4 mt-lg-0">
+					<div class="advice-box p-5 p-lg-4">
+						<span class="box-title">Pomoc</span>
+						<div id="advice"></div>
+					</div>
+				</div>
+			</section>
+		</section>
+	</main>
+	<footer class="bg-body-tertiary text-center text-lg-start">
+		<span>
+			Projekt i realizacja Anita Plichta
+		</span>
+	</footer>
+	<script src="main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

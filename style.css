@@ -1,0 +1,176 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	background-color: #232323;
+	color: #ffffff;
+	background-image: url(img/background.jpg); 
+    background-size: cover;
+    background-position: center center;
+    animation: zoom 15s infinite alternate;
+	font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+header {
+	background-color: #232323;
+	width: 100vw;
+	min-height: 6vh;
+	position: fixed; 
+	z-index: 1;
+}
+
+main {
+	position: relative;
+	height: 100vh;
+	overflow-Y: auto;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	min-height: 4vh;
+	background:#232323;
+	color: #ffffff;
+	padding-top: 5px;
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.search-box {
+	background: rgba(0,0,0,0.8);
+	margin-top: 15vh;
+	border-radius: 50px;
+}
+
+input {
+    padding: 20px;
+    background: transparent;
+    border: 0px;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+#search {
+    background: transparent;
+    border: 0px;
+    border-radius: 50px;
+}
+
+button img {
+    min-width: 20px;
+    max-width: 20px;
+    filter: invert(1);
+}
+
+.app-no {
+	display: none;
+}
+
+.app-yes {
+	display: block !important;
+}
+
+.weather-box, .info-box, .hours-box, .days-box, .advice-box {
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	border-radius: 50px;
+	padding: 20px;
+}
+
+#current-icon img {
+	width: 150px;
+}
+
+#city-name {
+	font-size: 40px;
+	margin-bottom: -10px;
+}
+
+#date, #time, #weather-description {
+	font-size: 20px;
+}
+
+#time {
+	font-weight: bold;
+}
+
+#current-temperature {
+	font-size: 60px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#wind-speed span, #wind-direction span, #current-pressure span, #current-humidity span, #current-clouds span {
+	font-weight: bold;
+}
+
+.hours-box, .days-box {
+	text-align: center;
+}
+
+.box-title {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: left !important;
+}
+
+.temp {
+	font-weight: bold;
+}
+
+.icons img {
+	width: 80px;
+}
+
+#advice a {
+	color: #ffffff;
+	text-decoration: none;
+	font-style: italic;
+}
+
+#advice a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+.article {
+	background: #232323;
+	margin-top: 15vh;
+	border-radius: 50px;
+}
+
+.article a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.article a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+select {
+	border-radius: 50px;
+}
+
+.photos {
+	width: 100%;
+	border-radius: 50px;
+}
+
+p {
+	text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+  }
