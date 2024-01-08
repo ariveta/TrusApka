@@ -1,3 +1,6 @@
+var app = document.querySelector('#app')
+app.classList.add('app-no')
+
 var look = document.querySelector('#look')
 var search = document.querySelector('#search')
 
@@ -572,6 +575,9 @@ search.addEventListener('click', function() {
         {
             advice.innerHTML = advice.innerHTML+`<a href="abcplantatora.html">Sprawdź ABC plantatora</a><br>`
         }
+
+        app.classList.remove('app-no')
+		app.classList.add('app-yes')
     })
 
     //Obsługa błędnych danych
