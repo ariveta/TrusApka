@@ -88,32 +88,40 @@
                         <a href="#w">W</a><span class="ml-2 mr-2">|</span>
                         <a href="#z">Z</a>
                     </div>
-                    <div class="col-12 mt-4 d-lg-none">
-                        <select class="col-12 p-2">
-                            <option>Wyszukiwanie alfabetyczne</option>
-                            <option><a href="#a">A</a></option>
-                            <option><a href="#b">B</a></option>
-                            <option><a href="#c">C</a></option>
-                            <option><a href="#d">D</a></option>
-                            <option><a href="#e">E</a></option>
-                            <option><a href="#f">F</a></option>
-                            <option><a href="#g">G</a></option>
-                            <option><a href="#h">H</a></option>
-                            <option><a href="#i">I</a></option>
-                            <option><a href="#j">J</a></option>
-                            <option><a href="#k">K</a></option>
-                            <option><a href="#l">L</a></option>
-                            <option><a href="#m">M</a></option>
-                            <option><a href="#n">N</a></option>
-                            <option><a href="#o">O</a></option>
-                            <option><a href="#p">P</a></option>
-                            <option><a href="#r">R</a></option>
-                            <option><a href="#s">S</a></option>
-                            <option><a href="#t">T</a></option>
-                            <option><a href="#u">U</a></option>
-                            <option><a href="#w">W</a></option>
-                            <option><a href="#z">Z</a></option>
+                    <div class="row col-12 mt-4 d-lg-none">
+                        <select class="col-6 p-2">
+                            <option value="#a">A</option>
+                            <option value="#b">B</option>
+                            <option value="#c">C</option>
+                            <option value="#d">D</option>
+                            <option value="#e">E</option>
+                            <option value="#f">F</option>
+                            <option value="#g">G</option>
+                            <option value="#h">H</option>
+                            <option value="#i">I</option>
+                            <option value="#j">J</option>
+                            <option value="#k">K</option>
+                            <option value="#l">L</option>
+                            <option value="#m">M</option>
+                            <option value="#n">N</option>
+                            <option value="#o">O</option>
+                            <option value="#p">P</option>
+                            <option value="#r">R</option>
+                            <option value="#s">S</option>
+                            <option value="#t">T</option>
+                            <option value="#u">U</option>
+                            <option value="#w">W</option>
+                            <option value="#z">Z</option>
                           </select>
+                          <button id="filter" class="col-6 col-sm-5 offset-sm-1 col-md-3 offset-md-3 p-2">
+                            <a href="">Szukaj</a>
+                        </button>
+                        <script>
+                            document.querySelector('select').addEventListener('change', (e) => {
+                                console.log(e);
+                                document.querySelector('#filter').innerHTML = `<a href="chwasty.html` + e.target.value + `">Szukaj</a>`;
+                            });
+                        </script>
                     </div>
                     <div class="col-12 mt-5">
                         <div id="g" class="row">
