@@ -56,6 +56,16 @@
 			</section>
 		</section>
 		<section id="app" class="row mt-5 mb-5">
+		<script>
+			var app = document.querySelector('#app')
+			app.classList.add('app-no')
+			var search = document.querySelector('#search')
+
+			search.addEventListener('click', function() {
+				app.classList.remove('app-no')
+				app.classList.add('app-yes')
+   			 })
+		</script>
 			<section class="row col-12">
 				<div class="col-12 col-sm-10 offset-sm-1 col-lg-7 offset-lg-1">
 					<div class="weather-box p-sm-1 p-md-3">
